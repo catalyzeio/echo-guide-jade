@@ -29,7 +29,7 @@ gulp.task('serve', function () {
     /**
      * Watch for all other changes, reload the whole page
      */
-    gulp.watch(["public/**/*.ejs", "public/**/*.json", "public/**/*.md"], function () {
+    gulp.watch(["public/**/*.jade", "public/**/*.json", "public/**/*.md"], function () {
       reload();
     });
   })
