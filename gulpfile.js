@@ -1,3 +1,6 @@
+var Promise = require('es6-promise').Promise;
+// The above was necessary to fix compile-time errors: http://stackoverflow.com/a/35229818
+
 var gulp        = require('gulp');
 var harp        = require('harp')
 var browserSync = require('browser-sync');
@@ -23,8 +26,8 @@ gulp.task('serve', function () {
     /**
      * Watch for sass changes, tell BrowserSync to refresh main.css
      */
-    gulp.watch("public/**/*.sass", function () {
-      reload("main.css", {stream: true});
+    gulp.watch("public/**/*.scss", function () {
+      reload("app.css", {stream: true});
     });
     /**
      * Watch for all other changes, reload the whole page

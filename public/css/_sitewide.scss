@@ -1,0 +1,99 @@
+// img, svg { // any way to minimize the FOUC?
+//     color: rgba(50,50,50,0.4);
+//     border: none;
+// }
+.masthead {
+    color: white;
+    background: {
+        color: $stratum-gray-dark;
+    };
+    padding-bottom: 2em; //legacy
+    padding-bottom: 5vw;
+    padding-left:  3vw;
+    padding-right: 3vw;
+    @include breakpoint(xlarge up){
+        padding-left:  0;
+        padding-right: 0;
+    }
+    &--subheader {
+        font: {
+            size: 1.5em;
+            weight: $font-weight-bold;
+        };
+        opacity: 0.7;
+    }
+}
+.section-article {
+    @include container-pad;
+    &--header {
+        &-group {
+            margin-bottom: 1.5rem;
+        }
+    }
+    &--subheader {
+        font: {
+            size: 1.2rem;
+            weight: $font-weight-bold;
+        };
+        opacity: 0.7;
+    }
+    &--icon {
+        margin-bottom: $pad / 3;
+        height: 42px;
+        width: 42px;
+    }
+    &--block {
+        margin-bottom: $pad / 2;
+    }
+    &--block-header {
+        font: {
+            size: 1rem;
+            weight: $font-weight-bold;
+        }
+    }
+}
+
+.container{
+    &--logo-cluster {
+        @include flex;
+        @include flex-align(center, middle);
+        @include breakpoint(large up) {
+            max-width: 80%;
+        }
+    }
+}
+.customer {
+    @include flex-it(0 0 auto);
+    @include fx-hover-nudge();
+    padding: 1.5vw;
+}
+.logo {
+    &--customer {
+        height: 6vw;
+        @include breakpoint(medium up) {
+            height: 3vw;
+        }
+        @include breakpoint(large up) {
+            height: 2.5vw;
+        }
+    }
+    &--nav {
+        width: 100px;
+        height: 22px; // how can we do this responsively?
+        min-width: 50px;
+        &:hover path{
+            fill: hsl(188, 100%, 89%);
+        }
+    }
+}
+
+hr {
+    &.divider{
+        &-white {
+            border-color: white(.5);
+        }
+        &-short{
+            margin: 1rem $pad * 1.5;
+        }
+    }
+}

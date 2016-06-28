@@ -9,6 +9,7 @@
   "author": "catalyze.io",
   "license": "ISC",
   "devDependencies": {
+    "bower-files": "^3.13.1",
     "gulp": "^3.9",
     "gulp-gh-pages": "^0.3.3",
     "harp": "^0.20.0",

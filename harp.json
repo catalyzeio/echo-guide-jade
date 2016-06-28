@@ -1,7 +1,13 @@
 {
-  "globals": {
-    "site": "Echo II guide demo",
-    "description": "blank for now",
-    "url": "http://catalyze.io"
-  }
+    "globals": {
+        "sitename": "Echo II guide",
+        "description": "Echo II guide demo - Jade + Harp",
+        "author": "Allan White",
+        "email": "allan@catalyze.io",
+
+        "navigation": [
+            { "title" : "Home", "link": "/" },
+            { "title" : "About", "link": "/about" }
+        ]
+    }
 }

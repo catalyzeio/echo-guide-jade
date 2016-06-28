@@ -1,0 +1,55 @@
+// functions includes mixins for now
+@function black($opacity) {
+    @return rgba(0,0,0,$opacity);
+}
+
+@function white($opacity) {
+    @return rgba(255,255,255,$opacity);
+}
+
+@mixin shadow($offset, $blur, $opacity) {
+    box-shadow: $offset $offset $blur black($opacity);
+}
+@mixin opacity($alpha){
+	opacity: $alpha;
+}
+@mixin container-pad() {
+    padding: 2em; //legacy
+    padding: 5vw 4vw;
+}
+// centered bg images
+
+@mixin background-fill ($align...) { // center center
+    background:{
+        repeat: no-repeat;
+        position: $align;
+        size: cover;
+    }
+}
+@mixin button-hollow($color){
+    $button-border-width: 1px;
+    background-color: transparent;
+    border: $button-border-width solid $color;
+    color: $color;
+    &:hover,
+    &:focus {
+        border: $button-border-width solid adjust-color($color, $lightness: 20%);
+        background-color: transparent;
+        color: adjust-color($color, $lightness: 20%);
+    }
+}
+// pass any arguments to a flex: statement
+@mixin flex-it ($set...){
+    -webkit-box-flex: 0;
+        -webkit-flex: $set;
+            -ms-flex: $set;
+                flex: $set;
+}
+
+@mixin fx-hover-nudge {
+    transition: all 100ms ease-out;
+    &:focus,
+    &:hover {
+        transform: translate3d(3px, 0, 0);
+    }
+}

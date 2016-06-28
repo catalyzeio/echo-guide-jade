@@ -1,0 +1,27 @@
+.typo-styles {
+    dt {
+        display: block;
+        float: left;
+        color: #fff;
+        background-color: rgba(0,0,0,.24);
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+        line-height: 32px;
+        text-align: center;
+        font-weight: $font-weight-bold;
+        margin-top: 5px;
+    }
+    dd {
+        display: block;
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+    &--demo {
+        margin-bottom: 5px;
+    }
+    &--desc {
+        font-size: 90%;
+        opacity: 0.6;
+    }
+}

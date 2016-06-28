@@ -1,0 +1,21 @@
+.button {
+    @include fx-hover-nudge();
+    &-hollow {
+        @include button-hollow($primary-color);
+    }
+    &-hollow--white {
+        @include button-hollow($white);
+    }
+    &-hollow--secondary {
+        @include button-hollow($stratum-gray-light);
+    }
+    &-hollow--red {
+        @include button-hollow($red);
+    }
+    font-weight: $font-weight-bold;
+}
+.button-group {
+    .button:not(.button-hollow) {
+        border: 0;
+    }
+}

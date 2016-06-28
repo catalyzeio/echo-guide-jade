@@ -1,0 +1,100 @@
+.flex-grow {
+    flex: 1 1 auto;
+}
+.spaced-out {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.circle{
+    border-radius: 50%;
+}
+.grayscale {
+    filter:         grayscale(1);
+    -webkit-filter: grayscale(1);
+    // opacity:     $opacity-faded;
+    &:hover {
+        transition:         .3s linear;
+        -webkit-transition: .3s linear;
+        filter:             grayscale(0%);
+        -webkit-filter:     grayscale(0);
+        //opacity: 1 !important;
+    }
+}
+.faded {
+    @include opacity(0.6);
+}
+.group {// add .group to a container to give it extra bottom menu-margin
+    margin-bottom: 1rem;
+    @include breakpoint(medium up) {
+        margin-bottom: 2rem;
+    }
+}
+.container {
+    &-image-fill {
+        @include background-fill (center top);
+    }
+    &-color { // this could totally be done with a sass-map, though there are some variations like gradients.
+        &--blue {
+            background: $blue;
+            color: white;
+        }
+        &--gray {
+            background: $stratum-gray;
+            background: linear-gradient(to bottom, $stratum-gray 0%, adjust-color($stratum-gray, $lightness: 15%) 100%);
+            color: white;
+        }
+        &--gray-light {
+            background: $gray-11; //adjust-color($stratum-gray, $lightness: 15%);
+            // color: white;
+        }
+        &--gray-dark {
+            background: $stratum-gray-dark; //adjust-color($stratum-gray, $lightness: 15%);
+            background: linear-gradient(to top, $stratum-gray-dark 0%, adjust-color($stratum-gray-dark, $lightness: 10%) 100%);
+            color: white;
+        }
+        &--red {
+            background: $red;
+            color: white;
+        }
+        &--red-dark {
+            background: $red-dark;
+            color: white;
+        }
+        &--tint {
+            background: black(0.5);
+        }
+    }
+    &-pad{
+        &--medium {
+            padding: 1.5em; //legacy
+            padding: 3vw 2vw;
+        }
+    }
+}
+.full-height {
+    height: 100%; // for items within a flexbox grid - equal height objects
+}
+// These make <section> tags full-width for responsive layouts.
+.full-width {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+    max-width: initial;
+}
+// .material-icons { // overrides from default google settings
+//     vertical-align: middle;
+//     font-size: 140% !important;
+// }
+
+figure {
+    margin: 0 0 $pad 0;
+    figcaption {
+        font: {
+            size: 0.8rem;
+            style: italic;
+        }
+        opacity: 0.6;
+        text-align: center;
+    }
+}

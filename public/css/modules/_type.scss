@@ -1,0 +1,54 @@
+a{
+    font-weight: bolder; // one step more!
+    // transition: all 100ms ease-out;
+    // &:hover {
+    //     text-decoration: underline;
+    // }
+}
+h3 {
+    font-weight: $font-weight-regular;
+}
+h4, h5, h6 {
+    font-weight: $font-weight-bold;
+    opacity: 0.7;
+}
+h5, h6 {
+    font-style: italic;
+}
+blockquote {
+    font-style: italic;
+}
+.subheader--spaced-out {
+    font: {
+        size: 1.3rem;
+        weight: $font-weight-bold;
+    }
+    opacity: 0.5;
+    @extend .spaced-out;
+    margin-bottom: $pad * 0.5;
+}
+li {
+    line-height: $paragraph-lineheight * 0.9;
+    margin-bottom: $paragraph-margin-bottom * 0.5;
+}
+hr {
+    &.content {
+        border: none;
+        margin: 2rem 0;
+    }
+}
+footer {
+    font-size: smaller;
+    color: white(0.6) !important; // assumes a dark footer
+}
+.quote{
+    &-full {
+        font: {
+            weight: $font-weight-light;
+            size: 24px;
+        }
+        @include breakpoint (medium up){
+            font-size: 3vw;
+        }
+    }
+}

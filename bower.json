@@ -1,9 +1,21 @@
 {
-  "name": "echo-jade-harp",
-  "version": "0.0.1",
-  "dependencies": {
-    "jquery": "~1.10.2",
-    "modernizr": "~2.7",
-    "bootstrap-sass": "~3.0.2"
-  }
+    "name": "echo-jade-harp",
+    "version": "0.0.1",
+    "main": "gulpfile.js",
+    "authors": [
+        "Catalyze <hello@catalyze.io>"
+    ],
+    "dependencies": {
+        "jquery": "~2.2.0",
+        "foundation-sites": "~6.2.2",
+        "motion-ui": "~1.2.2"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "private": true
 }

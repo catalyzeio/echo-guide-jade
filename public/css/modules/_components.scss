@@ -1,0 +1,120 @@
+.media-object {
+
+}
+.avatar {
+    &--small { // inline with content
+        // max-width: 90%;
+        @include breakpoint(medium up) {
+            width: $thing-s;
+        }
+    }
+    &--medium {
+        // max-width: 90%;
+        @include breakpoint(medium up) {
+            width: $thing-m;
+        }
+    }
+    &--large {
+        padding: $pad;
+        @include breakpoint(medium up) {
+            width: $thing-xl;
+            padding: 0;
+        }
+    }
+}
+.person {
+    &-name {
+        font: {
+            size: 1em;
+            weight: $font-weight-bold;
+        }
+    }
+    &-title {
+
+    }
+    &-role {
+
+    }
+    &-quote {
+        font: {
+            style: italic;
+            // weight: $font-weight-bold;
+        }
+    }
+}
+.callout {
+    &-gray {
+        background-color: $gray-12;
+        // color: $white;
+    }
+    &-dark {
+        background-color: rgba($black, 0.4);
+        color: $white;
+    }
+    &-light {
+        background-color: white(0.8);
+        //color: $white;
+    }
+    &-brand--primary {
+        background-color: $primary-color;
+        color: $white;
+    }
+    &-brand--secondary {
+        background-color: $stratum-gray-light;
+        color: $white;
+    }
+    &-brand--red {
+        background-color: $red;
+        color: $white;
+    }
+    &--hover { // for callouts that behave like buttons!
+        transition: box-shadow 100ms ease-out;
+        @include shadow(0, 0, 0.2);
+        &:hover {
+            @include shadow(0, 20px, 0.4);
+        }
+    }
+}
+.card {
+    $corner: $global-radius;
+    border-radius: $corner;
+    margin-bottom: 2rem;
+    &-basic {
+        background-color: $gray-12;
+        text-align: center;
+        border: 1px solid $gray-10;
+        overflow: hidden;
+        // height: 100%;
+    }
+    &-info { // for the colored ones
+        padding: 1.5rem;
+        @include flex;
+        @include flex-align($x: center, $y: stretch);
+        flex-direction: column;
+        @include breakpoint(medium up){
+            height: 90%; // there's a problem here, where margin-bottom doesn't add space after the card, but inside it. Investigating
+        }
+    }
+    &-icon {
+        margin: 0;
+    }
+    &-header {
+        padding: 1rem;
+    }
+    &-body {
+        padding: 1rem;
+        border-top: 1px solid $gray-10;
+        border-bottom: 1px solid $gray-10;
+        background-color: $gray-11;
+        &--collapse {
+            padding: 0;
+        }
+    }
+    &-footer {
+        // @include flex-align-self(bottom);
+        padding: 1rem;
+        .button {
+            margin: 0;
+        }
+    }
+}
