@@ -17,7 +17,8 @@ var sassPaths = [
 var jsPaths = [
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/what-input/what-input.min.js',
-    'bower_components/foundation-sites/dist/foundation.min.js'
+    'bower_components/foundation-sites/dist/foundation.min.js',
+    'bower_components/svg-injector/dist/svg-injector.min.js'
 ];
 
 /**
