@@ -1,0 +1,7 @@
+// for bugs, shameful dank hacks, and the worst of the worst.
+// Must appear at the end of the pipeline.
+
+// there's evidence that this is a Foundation 6.x bug. Seems to have the wrong flexbox attributes for floating right (older version used floats).
+.top-bar-right {
+    flex: 0 0 auto !important;
+}

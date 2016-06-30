@@ -1,27 +1,12 @@
+- var pageTitle = "Echo Jade Harp Foundation Gulp Blah Blah Demo"
+
 //- Include mixins from global mixins file
 include /_includes/_mixins
-
+//- so, using `!= partial()` is useful because you can pass data thru it; but only seems to work as a relative path. Abs. path breaks. This probably belongs in a template, not here. 
+include /_partials/_nav-mobile
 header.masthead.container-image-fill(data-interchange='[/assets/img/data-distortion-textures-@1x.png, small], [/assets/img/data-distortion-textures-@2x.png, large]')
-    nav
-        .title-bar.row(data-responsive-toggle='site-menu', data-hide-for='medium')
-            button.menu-icon(type='button', data-toggle='')
-            .title-bar-title Menu
-        #site-menu.top-bar.row
-            .top-bar-left
-                ul.dropdown.menu(data-dropdown-menu='')
-                    li.menu-text
-                        a.menu-logo(href='index.html', title='main')
-                            img.logo--nav.svg-color--white.inject-me(src='/assets/svg/logo-catalyze.svg', alt='site logo')
-                    li
-                        a.nav-link--light(href='type.html') Typography
-                    li
-                        a.nav-link--light(href='components.html') Components
-            .top-bar-right
-                .menu
-                    .input-group.align-right
-                        input.input-group-field(type='search', placeholder='Search')
-                        .input-group-button
-                            input.button(type='submit', value='Search')
+    include /_partials/_nav-primary
+
     .row
         .small-12.columns
             h1.header-masthead Components & Objects
@@ -33,7 +18,6 @@ main
                 h1.section-article--header Person Cards
                 hr.divider
                 h3 Uses the flexbox n-up grid, and are responsive
-                +customerLogos(2)
         .row.small-up-2.large-up-4.group
             .column.media-object.card-person.stack-for-small
                 .media-object-section

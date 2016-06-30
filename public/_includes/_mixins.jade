@@ -8,7 +8,7 @@
 //- Include _functions.jade so you only have to include _mixins everywhere else
 include _functions
 
-//- Get any customer logo as an object from master list
+//- Get any customer logo as an object from master list, eg. +customerLogos(2)
 mixin customerLogos(id, w)
     // get object from /public/_data.json - see https://harpjs.com/docs/development/metadataz
     - var thelogo = public._data.customerLogos[id]
